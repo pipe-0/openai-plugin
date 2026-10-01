@@ -1,0 +1,43 @@
+{
+  "name": "pipe0",
+  "version": "1.0.0",
+  "description": "Prospect leads, enrich contacts with work emails and phone numbers, and build complex GTM automations in pipe0 Sheets through the hosted pipe0 MCP server. Sign in with your pipe0 account on first connect.",
+  "author": {
+    "name": "Florian Martens",
+    "url": "https://github.com/florianmartens"
+  },
+  "homepage": "https://pipe0.com/docs/sdks/mcp",
+  "repository": "https://github.com/pipe-0/openai-plugin",
+  "license": "MIT",
+  "keywords": [
+    "pipe0",
+    "pipe0 mcp",
+    "pipe0 sheets",
+    "pipe0 enrichment",
+    "pipe0 search"
+  ],
+  "mcpServers": "./.mcp.json",
+  "interface": {
+    "displayName": "pipe0",
+    "shortDescription": "Find and enrich B2B leads",
+    "longDescription": "pipe0 finds people and companies, enriches them with work emails, phone numbers, and LinkedIn data, and runs GTM automations in pipe0 Sheets.\n\n- Search for people and companies by title, industry, location, headcount, and more.\n- Enrich contacts with verified work emails, phone numbers, and company data.\n- Build pipe0 Sheets with enrichment columns, filters, and schedules that keep them fresh.\n- Validate every request before anything is billed, and verify results cell by cell after a run.\n- Write versioned reports next to your sheets.\n\nSign in with your pipe0 account on first use. Tool calls spend pipe0 credits like regular API requests; tools that spend credits or change data ask for confirmation first.",
+    "developerName": "Florian Martens",
+    "category": "Productivity",
+    "capabilities": [
+      "Interactive",
+      "Write"
+    ],
+    "websiteURL": "https://pipe0.com",
+    "supportURL": "https://www.pipe0.com/support",
+    "privacyPolicyURL": "https://www.pipe0.com/resources/legal/privacy-policy",
+    "termsOfServiceURL": "https://www.pipe0.com/resources/legal/terms-of-service",
+    "defaultPrompt": [
+      "Find the work email for the Head of Marketing at linear.app",
+      "Find 20 SaaS companies in Germany with 50 to 200 employees",
+      "Build a pipe0 sheet of these companies with a work email column"
+    ],
+    "logo": "./assets/logo.png",
+    "composerIcon": "./assets/composer-icon.png",
+    "screenshots": []
+  }
+}
