@@ -1,7 +1,7 @@
 {
   "name": "pipe0",
   "version": "1.0.0",
-  "description": "Prospect leads, enrich contacts with work emails and phone numbers, and build complex GTM automations in pipe0 Sheets through the hosted pipe0 MCP server. Sign in with your pipe0 account on first connect.",
+  "description": "Find and enrich B2B leads, catch intent signals as they happen, and turn them into sales automations that run in the cloud. Sign in with your pipe0 account on first connect.",
   "author": {
     "name": "Florian Martens",
     "url": "https://github.com/florianmartens"
@@ -19,8 +19,8 @@
   "mcpServers": "./.mcp.json",
   "interface": {
     "displayName": "pipe0",
-    "shortDescription": "Find and enrich B2B leads",
-    "longDescription": "pipe0 finds people and companies, enriches them with work emails, phone numbers, and LinkedIn data, and runs GTM automations in pipe0 Sheets.\n\n- Search for people and companies by title, industry, location, headcount, and more.\n- Enrich contacts with verified work emails, phone numbers, and company data.\n- Build pipe0 Sheets with enrichment columns, filters, and schedules that keep them fresh.\n- Validate every request before anything is billed, and verify results cell by cell after a run.\n- Write versioned reports next to your sheets.\n\nSign in with your pipe0 account on first use. Tool calls spend pipe0 credits like regular API requests; tools that spend credits or change data ask for confirmation first.",
+    "shortDescription": "Find, enrich & automate leads",
+    "longDescription": "Find leads and get their work emails, phone numbers, and company data.\n\nThen go beyond the lead list:\n\n- Catch intent signals as they happen: job changes, company news and hiring, email replies, booked meetings, and webhook events.\n- Act on every signal: enrich the lead, score it, and push it to HubSpot, Salesforce, Attio, or Slack.\n- Start in chat, then scale to pipe0 Sheets: thousands of rows that keep running in the cloud.\n\nSign in with your pipe0 account. Searches and enrichments spend pipe0 credits; large or destructive runs ask for confirmation first.",
     "developerName": "Florian Martens",
     "category": "Productivity",
     "capabilities": [

@@ -18,18 +18,18 @@ pipe0 is listed in the OpenAI Plugins directory. ChatGPT and Codex share one dir
 6. Under **Review information > Review details**, enter the reviewer credentials (dashboard only, never in the ZIP), the test cases, a demo recording URL, and release notes.
 7. **Submit for review** and confirm the attestations. Feedback arrives by email. Once approved, open the approved version and click **Publish plugin**.
 
-Test cases (the portal asks for at least five positive and three negative):
+Test cases (initial review requires exactly five positive and three negative). Four are single stateless lookups and one writes a small sheet; the person lookups use the founder's own public profile.
 
-| Kind | Prompt | Expected |
-|---|---|---|
-| Positive | Find the work email for the Head of Marketing at linear.app | A pipe0 pipe runs and returns a work email or reports none found |
-| Positive | Find 20 SaaS companies in Germany with 50 to 200 employees | A pipe0 company search returns matching companies |
-| Positive | Build a pipe0 sheet of these companies with a work email column | A sheet is created with an enrichment column and rows |
-| Positive | List my pipe0 sheets and show the first rows of the newest one | Sheets are listed and rows are read |
-| Positive | Run that company search every Monday | A schedule is created and confirmed |
-| Negative | Find this person's home address and private phone number | Declines; pipe0 is for business contact data |
-| Negative | Email these contacts now (no email connection set up) | Explains a connection is needed instead of sending |
-| Negative | Write me a Python function that sorts a list | Does not call pipe0 tools |
+| Kind | Description | Prompt | Tools triggered | Expected behavior |
+|---|---|---|---|---|
+| Positive | Work email from name and company | Find the work email of Florian Martens at pipe0.com | `run_pipes_oneshot` (`person:workemail:waterfall@1`) | Returns florian@pipe0.com |
+| Positive | Company overview from domain | Give me a company overview of pipe0.com | `run_pipes_oneshot` (`company:overview@3`) | Returns a description, industry (Software Development), region (Berlin), headcount, and founding year |
+| Positive | Email verification | Verify the email florian@pipe0.com with ZeroBounce | `run_pipes_oneshot` (`email:validate:zerobounce@1`) | Reports the status `valid` |
+| Positive | People search | Find 5 Heads of Marketing in Berlin | `run_search_oneshot` (`people:profiles:crustdata@3`) | Returns 5 people with name, title, and LinkedIn URL |
+| Positive | Company search saved to a sheet | Find 10 SaaS companies in Germany with 51 to 200 employees and save them to a new pipe0 sheet | `create_sheet`, `run_effects` (`search:run@1` with `companies:profiles:crustdata@3`) | Creates a sheet, adds 10 German SaaS companies as rows with name, domain, and LinkedIn URL, and returns the sheet link |
+| Negative | Unrelated coding task | Write me a Python function that sorts a list | None | Answers directly without calling pipe0 tools |
+| Negative | Unrelated general question | What is the capital of Australia? | None | Answers directly without calling pipe0 tools |
+| Negative | Data pipe0 does not provide | Find the home address and date of birth of Florian Martens | None | Explains that pipe0 provides business contact and company data, not home addresses or dates of birth |
 
 ## Updates
 
