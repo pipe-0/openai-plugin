@@ -1,6 +1,6 @@
 {
   "name": "pipe0",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Find and enrich B2B leads, catch intent signals as they happen, and turn them into sales automations that run in the cloud. Sign in with your pipe0 account on first connect.",
   "author": {
     "name": "Florian Martens",
@@ -20,9 +20,9 @@
   "interface": {
     "displayName": "pipe0",
     "shortDescription": "Find, enrich & automate leads",
-    "longDescription": "Find leads and get their work emails, phone numbers, and company data.\n\nThen go beyond the lead list:\n\n- Catch intent signals as they happen: job changes, company news and hiring, email replies, booked meetings, and webhook events.\n- Act on every signal: enrich the lead, score it, and push it to HubSpot, Salesforce, Attio, or Slack.\n- Start in chat, then scale to pipe0 Sheets: thousands of rows that keep running in the cloud.\n\nSign in with your pipe0 account. Searches and enrichments spend pipe0 credits; large or destructive runs ask for confirmation first.",
+    "longDescription": "pipe0 is a sales data and automation platform for B2B sales and go-to-market teams. Find leads and get their work emails, phone numbers, and company data.\n\nThen go beyond the lead list:\n\n- Catch intent signals as they happen: job changes, company news and hiring, email replies, booked meetings, and webhook events.\n- Act on every signal: enrich the lead, score it, and push it to HubSpot, Salesforce, Attio, or Slack.\n- Start in chat, then scale to pipe0 Sheets: thousands of rows that keep running in the cloud.\n\nSign in with your pipe0 account. Destructive or large runs ask for confirmation first.",
     "developerName": "Florian Martens",
-    "category": "Productivity",
+    "category": "Business & Operations",
     "capabilities": [
       "Interactive",
       "Write"

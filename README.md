@@ -25,7 +25,7 @@ The plugin connects only to `api.pipe0.com`:
 
 Credentials: a pipe0 account. The access token is sent as `Authorization: Bearer` on `/v1/mcp` and is scoped to the organization the signed-in user belongs to.
 
-Production tool calls are billed in pipe0 credits like regular API requests. Tools that spend credits or mutate data ask for confirmation on the first call. Sandbox runs are free. See [Billing](https://pipe0.com/docs/billing).
+Tool calls run on the signed-in user's pipe0 account. Destructive or large runs ask for confirmation first.
 
 ## What is inside
 
